@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sit Straight</title>
+    <link rel="stylesheet" href="src/css/style.css">
+  </head>
+  <body onload="main()">
+    <div id="full-page-loader">
+      <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="warnings">
+      <div id="warning-text">
+        <p>
+          This webapp needs camera to run. It will obviously need camera
+          permission as well.
+        </p>
+        <p>The tracker needs proper even lighting on your face to work.</p>
+        <p>Your webcam should be positioned just above your desktop.</p>
+        <button id="warning-button" onclick="start()">OK I understand!</button>
+      </div>
+    </div>
+    <canvas id="canvas" class="canvas" width="200" height="100"></canvas>
+    <div id="message">
+      <p>Screen Eye Distance: <span id="se_distance"></span></p>
+      <p>Head UP/Down: <span id="x_rotate"></span></p>
+      <p>Head Left/Right Turn: <span id="y_rotate"></span></p>
+      <p>Head Left/Right Bend towards shoulder: <span id="z_rotate"></span></p>
+    </div>
+     <footer>
+      <div>
+        <a href="https://ko-fi.com/dinodroid">
+          <img src="https://ko-fi.com/img/Kofi_Logo_Blue.svg" height="30"
+        /></a>
+      </div>
+      <div>
+        Made with <i style="color:red">&#9829;</i> by dinodroid using
+        <a href="https://jeeliz.com/">
+          <img
+            src="https://jeeliz.com/wp-content/uploads/2018/01/LOGO_JEELIZ_BLUE.png"
+            height="22"
+        /></a>
+      </div>
+    </footer>
+    <script src="src/js/jeelizFaceTransfer.js"></script>
+    <script src="src/js/posture.js"></script>
+    <script src="src/js/audio.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
